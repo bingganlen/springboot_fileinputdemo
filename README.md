@@ -15,3 +15,7 @@ FileController改变  Windows下图片会上传到 G:/img 目录下
 #注意：  windows创建文件夹不区分大小写
 
 ![image](https://github.com/feihb123/images/blob/master/fileinput.png)
+
+文件命名： //使用UUID给图片重命名，并去掉四个“-”
+		String name = UUID.randomUUID().toString().replaceAll("-", "")
+        //设置文件路径   String url = request.getSession().getServletContext().getRealPath("/upload");
